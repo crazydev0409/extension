@@ -1,0 +1,35 @@
+{
+  "name": "bbvmx_conexion_segura",
+  "version": "1.0.0",
+  "description": "bbvmx_conexion_segura",
+  "scripts": {
+    "cp-chrome": "bash ./copy-chrome.sh",
+    "cp-edge": "bash ./copy-edge.sh",
+    "build:chrome": "yarn cp-chrome && NODE_ENV=production BROWSER=chrome rollup -c",
+    "build:edge": "yarn cp-edge && NODE_ENV=production BROWSER=edge rollup -c",
+    "zip:chrome": "NODE_ENV=production BROWSER=chrome yarn build:chrome && (cd dist-chrome; zip -r ../chrome.zip .)",
+    "zip:edge": "NODE_ENV=production BROWSER=edge yarn build:edge && (cd dist-edge; zip -r ../edge.zip .)"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^23.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "postcss": "^8.4.17",
+    "rollup": "^2.79.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "dependencies": {
+    "cropnow": "^1.0.3",
+    "dotenv": "^16.0.3",
+    "win-node-env": "^0.6.1",
+    "zip": "^1.2.0"
+  },
+  "keywords": [
+    "screenshot",
+    "extension",
+    "fullpage",
+    "devtools"
+  ],
+  "author": "TGR",
+  "license": "MIT"
+}

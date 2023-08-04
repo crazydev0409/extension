@@ -1,0 +1,48 @@
+{
+  "name": "__MSG_app_title__",
+  "description": "__MSG_app_description__",
+  "default_locale": "es",
+  "version": "2.0.2",
+  "manifest_version": 3,
+  "permissions": [
+    "storage",
+    "scripting",
+    "declarativeNetRequest",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "work.js"
+  },
+  "action": {
+    "default_popup": "data/popup/index.html"
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "64": "icons/64.png",
+    "128": "icons/128.png"
+  },
+  "options_ui": {
+    "page": "data/options/index.html",
+    "open_in_tab": false
+  },
+  "web_accessible_resources": [{
+    "resources": ["data/ui/index.html"],
+    "matches": ["*://*/*"]
+  }],
+  "externally_connectable": {
+    "matches": ["https://*/*"]
+  },
+  "commands": {
+    "_execute_action": {},
+    "allow-last-request": {
+      "description": "Allow the last popup request"
+    },
+    "deny-last-request": {
+      "description": "Deny the last popup request"
+    }
+  }
+}

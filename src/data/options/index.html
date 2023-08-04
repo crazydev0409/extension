@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Options Page</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="../library/bootstrap.min.css">
+</head>
+
+<body>
+  <p>
+    <span>No bloquee las ventanas emergentes de estos orígenes::</span>
+    <textarea id="popup-hosts" rows="4">Lista de nombres de host separados por comas (e.g.: www.google.com, www.yahoo.com)</textarea>
+  </p>
+  <p class="bc">
+    <button id="reset" class="button btn btn-primary">Reiniciar</button>
+    <span style="flex: 1"></span>
+    <span id="status"></span>
+    <button id="save" class="button btn btn-primary">Guardar opciones</button>
+  </p>
+
+  <hr>
+
+  <script src="/config.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

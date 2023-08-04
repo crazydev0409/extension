@@ -1,0 +1,26 @@
+<html>
+<html>
+  <link rel="stylesheet" type="text/css" href="../library/bootstrap.min.css">
+  <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+</html>
+<body>
+  <template id="entry">
+    <div class="ppblocker-div" data-badge=1 data-page=true>
+      <p data-i18n-value="textContent">Solicitud de ventana emergente</p>
+      <p data-id="info"></p>
+      <input type="button" value="✖" title="Close this notification" data-cmd="popup-close">
+      <div>
+        <input type="button" value="trust" class="btn btn-primary btn-sm" data-cmd="white-list" accesskey="t">
+        <span></span>
+        <input type="button" value="deny" class="btn btn-primary btn-sm" value="deny" data-cmd="popup-denied" accesskey="d">
+        <input type="button" value="background" class="btn btn-primary btn-sm" value="background" data-cmd="open-tab" accesskey="b">
+        <input type="button" value="redirect" class="btn btn-primary btn-sm" value="redirect" data-cmd="popup-redirect" accesskey="r">
+        <input type="button" value="allow" class="btn btn-primary btn-sm" value="allow"  data-cmd="popup-accepted" accesskey="a">
+      </div>
+    </div>
+  </template>
+  <script src="/config.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
